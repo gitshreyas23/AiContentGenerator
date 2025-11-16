@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Content Generator</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>AI Content Generator</h1>
+
+    <div class="card">
+      <label for="topic">Enter topic</label>
+      <input id="topic" placeholder="e.g. Benefits of daily walking" />
+
+      <div class="row">
+        <div>
+          <label for="contentType">Content type</label>
+          <select id="contentType">
+            <option value="paragraph">Paragraph</option>
+            <option value="blog">Blog post</option>
+            <option value="social">Social captions</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="length">Length</label>
+          <select id="length">
+            <option value="short">Short</option>
+            <option value="medium">Medium</option>
+            <option value="long">Long</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="generateBtn">Generate</button>
+    </div>
+
+    <div class="card output-card">
+      <h2>Generated Content</h2>
+      <div id="loading" class="hidden">Generating... ⏳</div>
+      <pre id="result" class="result"></pre>
+      <div class="actions">
+        <button id="copyBtn">Copy</button>
+        <button id="clearBtn">Clear</button>
+      </div>
+    </div>
+
+    <footer>
+      <small>Built with OpenAI & Flask • Keep your API key private</small>
+    </footer>
+  </div>
+
+  <script src="/static/js/main.js"></script>
+</body>
+</html>
